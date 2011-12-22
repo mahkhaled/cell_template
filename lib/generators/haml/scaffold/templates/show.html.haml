@@ -1,0 +1,12 @@
+=title(@<%= singular_table_name %>.<%= attributes.first.name %>)
+%p#notice= notice
+<% for attribute in attributes -%>
+%p
+  %b #{t('.<%= attribute.name %>')}:
+  = @<%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+
+- if !defined?(remote) || !remote
+	= link_to t('standard.cmds.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>)
+	\|
+	= link_to t('standard.cmds.back'), <%= index_helper %>_path

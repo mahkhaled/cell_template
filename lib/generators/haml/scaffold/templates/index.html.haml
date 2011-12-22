@@ -1,0 +1,23 @@
+=title(t(".title"))
+
+= filter_header
+.panel
+  = form_for @search, :url => <%= plural_table_name %>_path, :html => {:class => "searchable", :method => 'get', :id => "<%= plural_table_name %>_search"} do |f|
+    = hidden_field_tag :direction, params[:direction]
+    = hidden_field_tag :sort, params[:sort]
+<% for attribute in attributes -%>
+<% if attribute.type == :string || attribute.type == :text -%>
+    .field
+      = f.label :<%= attribute.name %>
+      = f.text_field :<%= attribute.name %>_contains
+<% end -%>
+<% end -%>
+    .action
+      = f.submit t("standard.search")
+
+.sortable.paginated#<%= plural_table_name %>
+  = render "<%= plural_table_name %>"
+  
+%br
+
+= link_to t('.new'), new_<%= singular_table_name %>_path(:format => :js), :class => 'popup_link'

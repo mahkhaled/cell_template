@@ -1,0 +1,17 @@
+== Usage
+
+Add to your Gemfile:
+
+  gem 'email_validator'
+
+Run:
+
+  bundle install
+
+Then add the following to your model:
+
+  validates :my_email_attribute, :email => true
+
+== Credit
+
+Based on http://thelucid.com/2010/01/08/sexy-validation-in-edge-rails-rails-3

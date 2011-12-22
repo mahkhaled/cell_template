@@ -1,0 +1,59 @@
+/* ------------------
+ styling for the tables 
+   ------------------   */
+
+.listing
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin-top: 16px;
+	width: 100%;
+	text-align: right;
+	border-collapse: collapse;
+	background: #e8edff;
+	border:1px;
+}
+
+.listing th
+{
+	font-size: 13px;
+	font-weight: bold;
+	padding: 8px;
+	background: #b9c9fe url('../images/table-images/gradhead.png') repeat-x;
+	border-top: 2px solid #d3ddff;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+
+.listing td
+{
+	padding: 8px; 
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid #fff;
+}
+
+.listing tfoot tr td
+{
+	background: #e8edff;
+	font-size: 12px;
+	color: #99c;
+	text-align:center;
+}
+
+.listing tbody tr:hover td
+{
+	background: #d0dafd url('../images/table-images/gradhover.png') repeat-x;
+	color: #339;
+}
+
+.operation
+{
+width:10px;
+}
+
+.listing .odd
+{
+	background: #d8e7ff; 
+}
+	

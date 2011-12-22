@@ -1,0 +1,12 @@
+ar:
+  user: &user_attributes
+    email: "البريد الإلكتروني"
+    password: "كلمة السر"
+    password_confirmation: "تأكيد كلمة السر"
+    current_password: "كلمة السر الحالية"
+    remember_me: "تذكر كلمة السر"
+
+  activerecord:   
+    attributes:
+      user: 
+        <<: *user_attributes

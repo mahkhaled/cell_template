@@ -1,0 +1,279 @@
+/*
+
+** -( Credits )- **
+*************************************
+*	Made by: Badr IT				*
+*	website: www.badrit.com			*
+*	e-mail : contact@badrit.com		*
+*************************************
+
+*/
+
+@import url("style_m.css");
+@import url("style_t.css");
+@import url("menu_style.css");
+/*- ver Menu--------------------------- */
+	
+/*- end ver Menu--------------------------- */
+h1{color:#00314C;}
+img {
+    border: none;
+} 
+
+.floatright{float:right; padding:10px;}
+.floatleft{float:left;}
+/* Header */
+
+/* Header */
+
+
+/* Header 2 */
+
+/* Header 2 home */
+
+a {
+	padding:0 0 0 5px;
+	margin:0;
+	color:#0867A9;
+	text-decoration:none;
+}
+
+a:link {
+	padding:0 0 0 5px;
+	margin:0;
+	color:#0867A9;
+	text-decoration:none;
+}
+a:hover {
+	
+	text-decoration:underline;
+	color:#0079cd;
+
+}
+
+/* body */
+body {
+	margin: 0;
+	padding: 0;
+	color:#00314C;
+	line-height: 1.2em;
+    background:url(../images/bdybg.png) repeat;
+	font-family: Helevetica,Arial,sans-serif;
+	font-size: 14px;
+}
+
+/* Footer */
+#wfooter{
+	width: 100%;
+	background: #FFF;
+	margin: 0;
+	padding: 0;
+
+}
+
+#footer {
+	margin: 0;
+	padding: 0;
+	width: 900px;
+	text-align: center;
+	font-weight:bold;
+	color: #0867A9;
+	clear:both;
+}
+.contentholder
+{
+width:900px;
+margin-left: auto;
+margin-right: auto;
+padding:10px;
+font-size:12px;
+clear:both;
+}
+.zholder
+{
+margin-left: auto;
+margin-right: auto;
+clear:both;
+}
+.dholder
+{
+width:900px;
+margin-left: auto;
+margin-right: auto;
+padding:10px;
+font-size:12px;
+
+}
+
+.contentholder5-g
+{
+width:900px;
+min-height:220px;
+margin-left: auto;
+margin-right: auto;
+padding:10px;
+font-size:12px;
+clear:both;
+min-height: 220px;
+}
+.contentholder5-home{
+  height: 220px;
+}
+.contentholder5s
+{
+background:url(../images/bg.png) no-repeat top left;
+}
+.contentholder5su
+{
+background:url(../images/bg2.png) no-repeat top left;
+}
+.width50
+{
+width:50px;
+}
+.width500
+{
+width:600px;
+text-align:justify;
+font-size:16px;
+color:white;
+}
+.contentholder2
+{
+width:900px;
+height:500px;
+margin-left: auto;
+margin-right: auto;
+padding:10px;
+font-size:12px;
+clear:both;
+background:url(../images/bg_.jpg) no-repeat;
+}
+
+.line
+{
+background-color:silver;
+height:5px;
+margin-left: auto;
+margin-right: auto;
+font-size:12px;
+clear:both;
+
+}
+.bg
+{
+background:url(../images/slice2.jpg);
+margin-left: auto;
+margin-right: auto;
+padding:10px;
+font-size:12px;
+clear:both;
+}
+
+.formhead
+{
+background:url(../images/top_c.png);
+margin-left: auto;
+margin-right: auto;
+clear:both;
+width:900px;
+height:19px;
+}
+
+.formbody
+{
+background:url(../images/slice_c.png) repeat-y;
+margin-left: auto;
+margin-right: auto;
+clear:both;
+width:900px;
+height:100%;
+}
+
+.formfoot
+{
+background:url(../images/bot_c.png);
+margin-left: auto;
+margin-right: auto;
+clear:both;
+width:900px;
+height:24px;
+}
+.foot
+{
+background:url(../images/down_2.png) repeat-x;
+margin-left: auto;
+margin-right: auto;
+
+clear:both;
+}
+.head
+{
+background:url(../images/headerx.jpg) repeat-x;
+margin-left: auto;
+margin-right: auto;
+height:250px;
+clear:both;
+}
+
+.contentholder3
+{
+width:900px;
+height:105px;
+margin-left: auto;
+margin-right: auto;
+font-size:12px;
+text-decoration: bold;
+clear:both;
+background:url(../images/q2.png) no-repeat;
+}
+
+.contentholder4
+{
+height:320px;
+margin-left: auto;
+margin-right: auto;
+padding:10px;
+font-size:12px;
+clear:both;
+background:url(../images/slice___.jpg);
+}
+.contentholder4s
+{
+height:auto;
+margin-left: auto;
+margin-right: auto;
+padding:10px;
+font-size:12px;
+clear:both;
+background:url(../images/headslice.png) repeat-x #c8e3ff;
+}
+
+.contentholder6
+{
+height:100px;
+margin-left: auto;
+margin-right: auto;
+padding:10px;
+font-size:12px;
+clear:both;
+background:url(../images/slice4.jpg);
+}
+div.panel
+{
+margin:0px;
+padding:5px;
+text-align:right;
+border-top:solid 1px #c3c3c3;
+display:none;
+height:auto;
+}
+p.filter
+{
+margin:0px;
+padding:5px;
+text-align:right;
+color:#fff;
+font-weight:bold;
+font-size:16px;
+}

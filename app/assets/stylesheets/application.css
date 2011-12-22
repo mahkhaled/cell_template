@@ -1,0 +1,98 @@
+form label {  
+  float: left;  
+  width: 100px;  
+  text-align: right;  
+  padding: 2px 16px;  
+}  
+.field_with_errors input{
+  float:right;
+}
+label.simple{
+  margin: 2px 0px;
+  text-align: right;
+}  
+form div.input {  
+  margin-bottom: 10px;
+}
+
+form input.text, form input.email, form input.password{
+  float:right;  
+}  
+  
+form div.boolean, form input[type='submit'] {  
+  margin-right: 120px;  
+}  
+  
+form div.boolean label {  
+  float: none;  
+  margin: 0;  
+}  
+
+.field{
+  padding-top:16px;
+  clear: both;
+}
+
+
+th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+th .asc {
+  background-image: url(/assets/up_arrow.gif);
+}
+
+th .desc {
+  background-image: url(/images/down_arrow.gif);
+}
+
+.field_with_errors {  
+  display: inline;  
+}  
+  
+.field_with_errors .message {  
+  color: #D00;  
+  padding-left: 5px;  
+  padding-right: 130px;  
+  display:inline;
+  text-align:right;
+  width: 200px;
+}  
+
+.actions, .action{
+  padding:20px 0;
+}
+
+label.wide, .field_with_errors label.wide{
+  width: 400px;
+}
+
+label.required{
+  background: url(/images/star.png) 2px no-repeat;
+}
+
+div.panel
+{
+margin:0px;
+padding:5px;
+display:none;
+height:auto;
+}
+
+.panel input[type=text]{
+font-size: 150%;
+}
+
+p.filter
+{
+margin:0px;
+padding:5px;
+font-weight:bold;
+}
+p.filter a{
+background:url(../images/slid.png) right no-repeat;
+text-decoration:none;
+
+}

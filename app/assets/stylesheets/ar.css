@@ -1,0 +1,12 @@
+p.filter{
+text-align:right;
+}
+
+div.panel
+text-align:right;
+}
+
+form label {  
+  float: right;  
+  text-align: left;  
+}  

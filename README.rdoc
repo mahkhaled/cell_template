@@ -1,0 +1,41 @@
+this is a template rails project
+
+= Features
+
+* email validator
+* internationalization generated files
+* index (ajax, pagination, sorting)
+* devise
+* testing environment
+* exception_logger
+* exception_notification
+
+= Installation
+
+  create your own git repo
+  git clone yourprojectrepo.git
+  git remote add blank_template git@github.com:mahkhaled/blank_template.git
+  git branch template
+  git pull blank_template master:template
+
+
+= TO PULL
+
+  git checkout template
+  git pull blank_template master:template
+
+
+= TO PUSH
+  
+  git checkout template
+  git push blank_template template:master
+
+
+= HOW TO CONFIGURE
+
+  update config/database.yml
+  replace all occurrances of Reviews YourProject case sensitive
+  update .rvmrc file
+  rake db:create
+  rake db:migrate
+

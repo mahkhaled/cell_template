@@ -1,0 +1,48 @@
+<%= I18n.locale %>:
+  <%= singular_table_name %>: &<%= singular_table_name %>_attributes
+<% @translated_attributes.each do |k,v| -%>
+    <%= k %>: "<%= v %>"
+<% end %> 
+
+  meta_search:
+    attributes:
+      <%= singular_table_name %>: 
+        <<: *<%= singular_table_name %>_attributes
+
+  activerecord:
+    models:
+      <%= singular_table_name %>: 
+        one: "<%= @sing_localized_name %>"
+        other: "<%= @plu_localized_name %>"
+    
+    attributes:
+      <%= singular_table_name %>: 
+        <<: *<%= singular_table_name %>_attributes
+    
+  <%= plural_table_name %>:
+    create:
+      flash: "<%= @sing_localized_name %> <%= I18n.translate('standard.flash.create')%>"
+
+    destroy:
+      flash: "<%= @sing_localized_name %> <%= I18n.translate('standard.flash.destroy')%>"
+
+    update:
+      flash: "<%= @sing_localized_name %> <%= I18n.translate('standard.flash.update')%>"
+    
+    edit:
+      title: "<%= I18n.translate('standard.cmds.edit') %> <%= @indefinite_sing_localized_name %>"
+      <<: *<%= singular_table_name %>_attributes
+
+    index:
+      title: "<%= @plu_localized_name %>"
+      new: "<%= I18n.translate('standard.cmds.new', :model => @indefinite_sing_localized_name) %>" 
+      <<: *<%= singular_table_name %>_attributes
+
+    new:
+      title: "<%= I18n.translate('standard.cmds.new', :model => @indefinite_sing_localized_name) %>"
+      <<: *<%= singular_table_name %>_attributes
+      
+    show:
+      <<: *<%= singular_table_name %>_attributes
+
+    

@@ -1,0 +1,7 @@
+=title(@<%= singular_table_name %>.<%= attributes.first.name %>)
+
+= render 'form'
+
+= link_to t('standard.cmds.show'), @<%= singular_table_name %>
+\|
+= link_to t('standard.cmds.back'), <%= index_helper %>_path

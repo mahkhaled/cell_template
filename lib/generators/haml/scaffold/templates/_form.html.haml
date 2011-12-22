@@ -1,0 +1,14 @@
+= form_for @<%= singular_table_name %>, :validate => true, :remote => (defined?(remote) && remote) do |f|
+  = render "shared/error_messages", :target => @<%= singular_table_name %>
+
+<% for attribute in attributes -%>
+  .field
+    = f.label :<%= attribute.name %>
+<% if attribute.field_type == "date_select" -%>
+    = f.text_field :<%= attribute.name %>, :class => "datepicker"
+<% else -%>
+    = f.<%= attribute.field_type %> :<%= attribute.name %>
+<% end -%>
+<% end -%>
+  .actions
+    = f.submit 

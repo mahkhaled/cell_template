@@ -1,0 +1,21 @@
+%table.listing
+  %tr
+<% for attribute in attributes -%>
+    %th= sortable :<%= attribute.name %>
+<% end -%>
+    %th
+    %th
+    %th
+
+  - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
+    %tr
+<% for attribute in attributes -%>
+      %td= <%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+      %td= link_to t('standard.cmds.show'), <%= singular_table_name %>_path(<%= singular_table_name %>, :format => :js), :class => "popup_link"
+      %td= link_to t('standard.cmds.edit'), edit_<%= singular_table_name %>_path(<%= singular_table_name %>, :format => :js), :class => "popup_link"
+      %td= link_to t('standard.cmds.delete'), <%= singular_table_name %>, :confirm => t('standard.labels.are_you_sure'), :method => :delete, :remote => true
+
+  %tfoot
+    %tr
+      %td{:colspan=>20}= will_paginate @<%= plural_table_name %>

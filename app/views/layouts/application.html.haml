@@ -1,0 +1,25 @@
+!!! Strict
+%html{:DIR => "RTL", :lang => "AR", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title 
+    = csrf_meta_tag
+    %META{:CONTENT => "text/html; charset=windows-1256", "HTTP-EQUIV" => "Content-Type"}
+      %meta{:content => "", :name => "description"}
+        %meta{:content => "Egypt", :name => "keywords"}
+          = stylesheet_link_tag "application", "colorbox"
+          = javascript_include_tag 'jquery', 'jquery-ui', 'jquery_ujs', "jquery.url", "rails.validations", 'application', 'jquery-ui-1.8.16.custom.min', "colorbox/jquery.colorbox", "jquery.ba-resize"
+          
+          :javascript
+            $(function() {
+              $(".filter").click(function(){
+                $(".panel").slideToggle("slow");
+              });
+            });
+    
+  %body
+    .header
+      .content
+    .space
+    .content
+      = yield
+    .footer

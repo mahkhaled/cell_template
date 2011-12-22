@@ -1,0 +1,20 @@
+en:
+  standard:
+    cmds:
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      new: "New %{model}"
+      back: "Back"
+    flash:
+      create: "Successfully Created!"
+      update: "Successfully Updated!"
+      destroy: "Successfully Deleted!"
+      update_failure: "Update Failure"
+    labels:
+      are_you_sure: "Are you sure?"
+    advanced_search: "Advanced Search"
+    search: "Search"
+      
+  login:
+    didnt_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
