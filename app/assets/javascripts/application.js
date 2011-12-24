@@ -56,3 +56,26 @@ function loadColorBox(){
   $.colorbox.resize(); 
 }
 
+function submitAjaxFileUpload(url, fileElementId, formInputsSelector)
+{
+  var data = [];
+  $(formInputsSelector).each(function(){
+    // don't include unchecked checkboxes
+    // don't include file inputs
+    if((this.type!="checkbox" || this.checked) && this.type!='file')
+      data.push([this.name,this.value]);
+  });
+  
+  $.ajaxFileUpload
+  (
+    {
+        url:url, 
+        data: data,
+        dataType: 'script',
+        secureuri:false,
+        fileElementId:fileElementId
+    }
+  )
+      
+  return false;
+} 

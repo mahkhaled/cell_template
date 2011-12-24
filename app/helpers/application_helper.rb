@@ -28,6 +28,21 @@ module ApplicationHelper
       "<div class='flash notice'>#{@flash_notice}</div>".html_safe
     end
   end
+  
+  def submit_ajax_with_file(obj, attach_name)
+    params = {:controller => obj.class.to_s.pluralize.underscore, :format => :js}
+    singular = obj.class.to_s.underscore
+    if obj.new_record?
+      params[:action] = :create
+      form_name = "new_#{singular}"
+    else
+      params[:action] = :update
+      params[:id] = obj.id
+      form_name = "edit_#{singular}"
+    end
+    
+    "submitAjaxFileUpload('#{url_for(params)}', '#{singular}_#{attach_name}', '.#{form_name} :input');return false;"
+  end
 end
 
 module WillPaginate::I18nViewHelpers
