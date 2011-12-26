@@ -29,7 +29,7 @@ module ApplicationHelper
     end
   end
   
-  def submit_ajax_with_file(obj, attach_name)
+  def submit_ajax_with_file(obj)
     params = {:controller => obj.class.to_s.pluralize.underscore, :format => :js}
     singular = obj.class.to_s.underscore
     if obj.new_record?
@@ -41,7 +41,7 @@ module ApplicationHelper
       form_name = "edit_#{singular}"
     end
     
-    "submitAjaxFileUpload('#{url_for(params)}', '#{singular}_#{attach_name}', '.#{form_name} :input');return false;"
+    "submitAjaxFileUpload('#{url_for(params)}', this);return false;"
   end
 end
 
