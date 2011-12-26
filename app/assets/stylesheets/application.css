@@ -4,9 +4,6 @@ form label {
   text-align: right;  
   padding: 2px 16px;  
 }  
-.field_with_errors input{
-  float:right;
-}
 label.simple{
   margin: 2px 0px;
   text-align: right;

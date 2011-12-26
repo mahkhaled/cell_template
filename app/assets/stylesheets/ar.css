@@ -10,3 +10,6 @@ form label {
   float: right;  
   text-align: left;  
 }  
+.field_with_errors input{
+  float:left;
+}
