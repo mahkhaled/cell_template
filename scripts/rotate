@@ -1,0 +1,66 @@
+#!/bin/bash
+
+
+Usage="Usage: rotate -p[please provide the fulll path and the file naming convension] -l[Number of versions you want to leave] -h[To display this help]"
+
+# Checking if there is no argument specified then print out Usage.
+if [ "$#" -le "0" ]; then 
+	echo $Usage
+	exit 1;
+fi
+
+# showopts function is responsible for getting options and switch between cases
+
+showopts () {
+  while getopts ":hp:l:" optname
+
+    do
+      # In case -h option specified then the script will print Usage and exit with exit status 1	
+      case "$optname" in
+	"h")
+	  echo $Usage
+	  exit 1
+	  ;;
+	# In case -p option specified then the script will store the path information into $folder variable
+        "p")
+	  folder=$OPTARG
+          ;;
+        # In case -l option specified then the script will store number of versions you want to leave into $leave variable
+        "l")
+	  leave=$OPTARG
+          ;;
+	# In case any other option which not handle the script will exit with message Unknown option and exit status 1
+        "?")
+          echo "Unknown option $OPTARG"
+	  exit 1
+          ;;
+        ":")
+	# Should not occur
+          echo "No argument value for option $OPTARG"
+          ;;
+        *)
+        # Should not occur
+          echo "Unknown error while processing options"
+          ;;
+      esac
+    done
+  return $OPTIND
+}
+# Execute the showopts function
+showopts "$@"
+
+# Print out Path and Versions information which provided by user
+echo -e "Path: $folder \nLeave: $leave"
+
+# Count total number of files
+counter=`ls -t ${folder} 2> /dev/null | wc -l`
+
+# If the total number of files greater than the number of leaves (Which specified by user parameter) then leave newest files with that number and delete others 
+if [ "$counter" -gt  "$leave" ]; then
+	ls -t ${folder} | tail -n $(($counter - $leave)) | xargs -i rm -rf ${folder}{} 
+	
+else 
+	echo "Nothing to rotate $counter"
+fi
+
+

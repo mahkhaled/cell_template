@@ -1,0 +1,12 @@
+#!/bin/bash
+
+time=`date +%Y.%m.%d.%H.%M.%S`
+
+# Backup Path
+bkpp=$1
+# Backup folder name under that path
+bkpf=$2
+# Backup file name will append to .tar.gz
+bkpn=$3
+
+tar czf $bkpn.$time.tar.gz -C $bkpp $bkpf

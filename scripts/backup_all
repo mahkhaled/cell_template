@@ -1,0 +1,6 @@
+#!/bin/bash
+
+./dbbackup offers_development ../dbbackups/
+./dataarchive ../public/ system ../systembackup/system
+./rotate -p ../dbbackups/ -l7
+./rotate -p ../systembackup/ -l7

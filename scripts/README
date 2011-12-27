@@ -1,0 +1,16 @@
+chmod -R 777 ./scripts
+edit dbbackup and change DB username and password
+
+#dbbackup
+`./scripts/dbbackup database_name dest_dir`
+ex: `./dbbackup offers_development ../dbbackups/`
+
+#dataarchive
+`./scripts/dataarchive folder_path folder_name destination`
+ex: `/scripts/dataarchive public/ system systembackup/system`
+
+
+#cleanup
+`./scripts/rotate -p dest_dir -l{{number_of_left_versions}}`
+# the following example will leave only THREE backups in dbbackups folder
+ex: `./scripts/rotate -p dbbackups/ -l3`

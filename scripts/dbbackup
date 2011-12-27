@@ -1,0 +1,12 @@
+#!/bin/bash
+
+time=`date +%Y.%m.%d.%H.%M.%S`
+
+dbuser="-uroot"
+dbpass="-p1234"
+database=$1
+
+file=$2$database.$time.sql
+
+mysqldump $database  $dbuser $dbpass > $file
+echo $file
