@@ -18,3 +18,7 @@ en:
       
   login:
     didnt_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
+
+  will_paginate:  
+    previous: "previous"
+    next: "next"
