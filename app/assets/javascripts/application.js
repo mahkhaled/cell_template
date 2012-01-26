@@ -31,10 +31,12 @@ $(function() {
   /* fix datepicker issue with client_side_validation */
   $( ".datepicker" ).datepicker({ dateFormat: 'dd-mm-yy', 
     onClose: function(dateText, inst) { 
-      field = $("#"+inst.id);
-      form=field.parents("form");
-      var settings = window[form.attr('id')];
-      field.isValid(settings.validators); 
+      if(jQuery(this).attr("data-validation") == "true"){
+        field = $("#"+inst.id);
+        form=field.parents("form");
+        var settings = window[form.attr('id')];
+        field.isValid(settings.validators); 
+      }
     }
   });
 
